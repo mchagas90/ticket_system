@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     #redirect_to root_path, notice: 'Usuário ou Senha inválido(s)'
 
     user = User.where(login: params[:login]).where(password: params[:password]).first
-
+binding.pry
     if user.nil?
       redirect_to root_path, notice: 'Usuário ou Senha inválido(s)'
     else
